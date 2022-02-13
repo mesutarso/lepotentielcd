@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: `Le Potentiel`,
@@ -8,9 +11,19 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         url:
-          process.env.WPGRAPHQL_URL || "https://backend.lepotentiel.cd/graphql",
+          process.env.GATSBY_WPGRAPHQL_URL ||
+          `https://backend.lepotentiel.cd/graphql`,
         schema: {
-          timeout: 1250000,
+          requestConcurrency: 50,
+        },
+        html: {
+          createStaticFiles: false,
+          useGatsbyImage: false,
+        },
+        type: {
+          MediaItem: {
+            createFileNodes: false,
+          },
         },
       },
     },
