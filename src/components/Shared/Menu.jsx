@@ -18,13 +18,13 @@ export default function Menu() {
     <MenuWrapper>
       <Container>
         <Row className="align-items-center justify-content-between">
-          <Col xs={4} md={4}>
+          <Col xs={2} md={2}>
             <Hamburger />
           </Col>
           <Col xs={4} md={4}>
             <Logo />
           </Col>
-          <Col xs={4} md={4}>
+          <Col xs={3} md={3}>
             <SearchField />
           </Col>
         </Row>

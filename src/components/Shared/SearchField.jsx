@@ -18,7 +18,7 @@ const InputField = styled.form`
     line-height: 16.41px;
     font-weight: 500;
     ::placeholder {
-      color: ${(props) => props.theme.colors.variant};
+      color: rgba(229, 35, 44, 0.45);
     }
   }
 `;
@@ -26,7 +26,11 @@ const InputField = styled.form`
 export default function SearchField() {
   return (
     <InputField>
-      <input type="search" placeholder="Recherhe..." className="search-control" />
+      <input
+        type="search"
+        placeholder="Recherhe..."
+        className="search-control"
+      />
       <Iconify icon="ant-design:search-outlined" />
     </InputField>
   );
