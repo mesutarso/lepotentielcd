@@ -1,5 +1,12 @@
 import React from "react";
+import Highlight from "../Shared/Highlight";
+import Menu from "../Shared/Menu";
 
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <>
+      <Highlight />
+      <Menu />
+    </>
+  );
 }

@@ -4,7 +4,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Le Potentiel`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://lepotentiel.cd`,
+    description: `Site de l'association Le Potentiel`,
   },
   plugins: [
     {

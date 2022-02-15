@@ -18,6 +18,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^2.0.2",
+    "bootstrap": "5.1.3",
     "dotenv": "^16.0.0",
     "gatsby": "^4.7.1",
     "gatsby-plugin-config": "^1.0.7",
@@ -33,8 +34,12 @@
     "gatsby-transformer-remark": "^5.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^2.1.2",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@iconify/react": "^3.1.3"
   }
 }
