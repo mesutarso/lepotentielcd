@@ -20,7 +20,7 @@ export default function Highlight() {
   return (
     <Wrapper>
       <Container>
-        <Row className="align-items-center flex-nowrap">
+        <Row className="align-items-center">
           <Col
             lg={2}
             md={2}
@@ -30,7 +30,7 @@ export default function Highlight() {
             Infos
           </Col>
           <Col lg={10} md={10} sm={10} className="d-flex align-items-center">
-            <p className="highlight-title text">
+            <p className="highlight-title text ">
               Création d’emplois : En 20 ans, l’ANAPI booste la relance du tissu
               industriel de la RDC
             </p>
