@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <div>
       <img
-        src="/logo_Le_Potentiel_white.png"
+        src="static/logo-potentiel-white.png"
         alt="logo"
         className="img-fluid"
       />
