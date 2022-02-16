@@ -5,12 +5,10 @@ import Logo from "./Logo";
 import Hamburger from "./Hamburger";
 import SearchField from "./SearchField";
 
-const MenuWrapper = styled.nav`
+const MenuWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   color: #fff;
   height: 110px;
-  display: flex;
-  align-items: center;
 `;
 
 export default function Menu() {
