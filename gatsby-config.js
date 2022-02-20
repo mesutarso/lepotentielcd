@@ -15,7 +15,7 @@ module.exports = {
           process.env.GATSBY_WPGRAPHQL_URL ||
           `https://backend.lepotentiel.cd/graphql`,
         schema: {
-          requestConcurrency: 50,
+          requestConcurrency: 150,
         },
         html: {
           createStaticFiles: false,
