@@ -17,14 +17,24 @@ const Title= styled.h2`
 font-weight:700;
 font-size:13px !important;
 `
-const CategoryPost=styled.h3`
+const CategoryPost=styled.div`
 background-color:red;
 color:white;
 text-align:center;
 box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
 font-size:12px !important;
-display:inline;
+display:inline-block;
 `
+
+const SubTitle=styled.div`
+background-color:white;
+color:red;
+text-align:center;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+font-size:12px !important;
+display:inline-flex;
+`
+
 const CardBody=styled.div`
 position:absolute;
 left:0;
@@ -32,13 +42,15 @@ bottom:10px;
 z-index:999;
 
 `
-const PrimaryCard=()=>{
+const BannerCard=()=>{
     return (
         <>
             <CardWrapper>
                 <img src="../img.jpg" className="img-fluid" alt="sport" /> 
                 <CardBody>
-                    <CategoryPost className="p-1 m-3"><b>POLITIQUE</b></CategoryPost>
+                    <CategoryPost className="p-1 mb-0 mx-3"><b>POLITIQUE</b></CategoryPost>
+                    <SubTitle className="p-1 mx-3 mt-0"><b>Avec la prise en charge des contraintes</b></SubTitle>
+                    
                     <Title className="text-white m-3">
                         Sport : barcelone champion UEFA primary, ipsum dolor sit amet
                         consectetur adipisicing elit.
@@ -49,4 +61,4 @@ const PrimaryCard=()=>{
         </>    
     )
 }
-export default PrimaryCard;  
+export default BannerCard;  

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components'
 
-const Title= styled.div`
-font-weight:800;
+const Title= styled.h2`
+font-weight:700;
 font-size:14px !important;
 line-height:21.5px;
 `
