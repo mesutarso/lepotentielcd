@@ -20,7 +20,7 @@ const ThirdCard=()=>{
                 <Col>
                 <img src="../img.jpg" className="img-fluid" alt="sport" /> 
                 </Col>
-                <Col className="position-relative pb-0">
+                <Col lg={7} className="position-relative pb-0">
                     <Title>Sport : barcelone champion UEFA primary, ipsum dolor sit amet</Title>
                     <Datation className="p-0 mb-0 text-muted">22-04-2022</Datation>   
                 </Col>
