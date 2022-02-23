@@ -5,6 +5,7 @@ const Title= styled.div`
 font-weight:700;
 font-size:14px !important;
 line-height:21.5px;
+color:black;
 `
 const CategoryPost=styled.h2`
 background-color:red;

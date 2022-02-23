@@ -5,6 +5,7 @@ const Title= styled.h2`
 font-weight:700;
 font-size:14px !important;
 line-height:21.5px;
+color:black;
 `
 const SimpleCard=()=>{
     return (
