@@ -86,10 +86,10 @@ const IndexPage = () => {
         <Col lg={8}  className="pe-lg-4">
           <Row><Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITE MONDIALE</b></h3></Col></Row>
           <Row>
-            <Col lg={6} className="mb-4">
+            <Col lg={6} className="mb-5">
               <SecondCard/>
             </Col>
-            <Col lg={6} className="mb-4">
+            <Col lg={6} className="mb-5">
              <SecondCard/> 
             </Col>
             <Col lg={6} >
