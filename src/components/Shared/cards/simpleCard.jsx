@@ -14,8 +14,8 @@ const SimpleCard=()=>{
                 <img src="../img.jpg" className="img-fluid" alt="sport" /> 
             </div>
             <Title className="mt-3">
-                Sport : barcelone champion UEFA Lorem, ipsum dolor sit amet
-                consectetur adipisicing.
+                Sport : barcelone champion UEFA Lorem, ipsum dolor 
+                
             </Title>
         </>    
     )

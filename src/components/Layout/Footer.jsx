@@ -48,7 +48,7 @@ const FooterWrapper = styled.div`
 export default function Footer() {
   return (
     <FooterWrapper>
-      <div className="cta-abonnement">
+      <div className="cta-abonnement mt-5">
         <Container className="d-flex justify-content-center">
           <div className="wrapper">
             <h2 className="text-center title mb-3">

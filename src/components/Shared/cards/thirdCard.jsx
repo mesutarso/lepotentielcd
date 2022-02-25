@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import { Col, Row } from "react-bootstrap";
 
 const Title= styled.h3`
-font-weight:700;
+font-weight:800;
 font-size:13px !important;
-color:black;
 `
 const Datation=styled.div`
  position:absolute;

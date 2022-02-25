@@ -2,12 +2,13 @@ import React from "react";
 import styled from 'styled-components'
 
 const Title= styled.div`
-font-weight:700;
+font-weight:800;
 font-size:14px !important;
 line-height:21.5px;
 color:black;
+
 `
-const CategoryPost=styled.h2`
+export const CategoryPost=styled.h2`
 background-color:red;
 color:white;
 position:absolute;
