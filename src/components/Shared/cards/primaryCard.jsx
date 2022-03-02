@@ -41,7 +41,7 @@ const PrimaryCard=()=>{
                     <CategoryPost className="p-1 m-3"><b>POLITIQUE</b></CategoryPost>
                     <Title className="text-white m-3">
                         Sport : barcelone champion UEFA primary, ipsum dolor sit amet
-                        consectetur adipisicing elit.
+                        consectetur
                     </Title>
                 </CardBody>
             </CardWrapper>

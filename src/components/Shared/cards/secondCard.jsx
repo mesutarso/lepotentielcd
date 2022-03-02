@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components'
 
 const Title= styled.div`
-font-weight:800;
+font-weight:700;
 font-size:14px !important;
 line-height:21.5px;
 color:black;
@@ -26,7 +26,7 @@ const SecondCard=()=>{
             </div>
             <Title className="mt-3">
                 Sport : barcelone champion UEFA Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Totam explicabo magnam molestiae.
+                consectetur.
             </Title>
         </>    
     )

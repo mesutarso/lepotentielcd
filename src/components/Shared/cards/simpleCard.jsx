@@ -10,12 +10,9 @@ color:black;
 const SimpleCard=()=>{
     return (
         <>
-            <div className="position-relative">
-                <img src="../img.jpg" className="img-fluid" alt="sport" /> 
-            </div>
+            <img src="../img.jpg" className="img-fluid" alt="sport" /> 
             <Title className="mt-3">
-                Sport : barcelone champion UEFA Lorem, ipsum dolor 
-                
+                Sport : barcelone champion UEFA Lorem, ipsum dolor      
             </Title>
         </>    
     )

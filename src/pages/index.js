@@ -19,25 +19,33 @@ font-size:12px !important;
 const IndexPage = () => {
   return (
     <Layout>
-       <Container className="my-5">
-      <h1>Page d'Accueil</h1>
+     
+     <Container className="my-5">
         <Row>
-        <Col lg={4} sm={2} xs={12}>
+          <Col lg={8} >
             <BannerCard/>
           </Col>
-          <Col lg={4} sm={2} xs={12}>
-            <PrimaryCard/>
+          <Col lg={4}>
+            <Row>
+               <Col lg={12} className="p-0">
+               <PrimaryCard/>
+               </Col>
+               <Col lg={6} className="mt-3 px-0">
+               <SecondCard/>
+              </Col>
+              <Col lg={6} className="mt-3 ps-1 pe-0">
+              <SecondCard/>
+              </Col>
+            </Row>
           </Col>
-          
         </Row>
       </Container>
-
 
       <Container>
       <Row>
         <Col lg={8} >
           <Row>
-          <Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITE NATIONALE</b></h3></Col>
+          <Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITES NATIONALES</b></h3></Col>
             <Col lg={6} className="mb-5">
               <SecondCard/>
             </Col>
@@ -55,23 +63,23 @@ const IndexPage = () => {
 
         <Col lg={4}>
           <Row className="mt-5 pt-0">
-              <Col lg={12} className="mb-4" >
+              <Col lg={12} className="mb-3" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 " >
+              <Col lg={12} className="mb-3" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 " >
+              <Col lg={12} className="mb-3" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 " >
+              <Col lg={12} className="mb-3" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 " >
+              <Col lg={12} className="mb-3" >
                 <ThirdCard />
               </Col>
 
-              <Col lg={12} className="mb-4 " >
+              <Col lg={12} className="mb-3" >
                 <ThirdCard />
               </Col>
               
@@ -79,6 +87,48 @@ const IndexPage = () => {
         </Col>
       </Row>
     </Container>
+
+<div className="container-fluid my-5" style={{backgroundColor:"rgba(255,0,0,0.1)"}}>
+   <Row>
+     <Col >
+     <Container className="my-5">
+     <h3 style={{fontSize:"19px",color:"red"}} className="mb-4"><b>ACTUALITES AFRICAINE</b></h3>
+      <Row>
+        <Col lg={4} sm={2} xs={12}>
+          <PrimaryCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12}>
+          <PrimaryCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12}>
+          <PrimaryCard/>
+        </Col>
+      </Row>
+      <Row >
+        <Col lg={4} sm={2} xs={12} className="mt-4">
+          <ThirdCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12} className="mt-4">
+        <ThirdCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12} className="mt-4">
+        <ThirdCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12} className="mt-4">
+        <ThirdCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12} className="mt-4">
+        <ThirdCard/>
+        </Col>
+        <Col lg={4} sm={2} xs={12} className="mt-4">
+        <ThirdCard/>
+        </Col>
+      </Row>
+    </Container>
+     </Col>
+   </Row>
+</div>
+
     
 
     <Container className="my-5">
@@ -104,19 +154,19 @@ const IndexPage = () => {
         <Col lg={4}>
           <Row><Col lg={12} className="ps-0"><h3 style={{fontSize:"19px",color:"black"}} className="mb-4 "><b>SPORT</b></h3></Col></Row>
           <Row className="bg-black px-1 py-4">
-              <Col lg={12} className="mb-4 text-white" style={{opacity:0.8}}>
+              <Col lg={12} className="mb-4 text-white" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 text-white" style={{opacity:0.8}}>
+              <Col lg={12} className="mb-4 text-white" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 text-white" style={{opacity:0.8}}>
+              <Col lg={12} className="mb-4 text-white" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 text-white" style={{opacity:0.8}}>
+              <Col lg={12} className="mb-4 text-white" >
                 <ThirdCard />
               </Col>
-              <Col lg={12} className="mb-4 text-white" style={{opacity:0.8}}>
+              <Col lg={12} className="mb-4 text-white">
                 <ThirdCard />
               </Col>
               <Col lg={12} className="text-white">
