@@ -17,9 +17,48 @@ font-size:12px !important;
 `
 // markup
 const IndexPage = () => {
+
+  const data=[{
+    id:1,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    category:"POLITIQUE"
+  },
+  {
+    id:2,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    category:"POLITIQUE"
+  },
+  {
+    id:3,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    category:"POLITIQUE"
+  },
+  {
+    id:4,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    category:"POLITIQUE"
+  },
+  {
+    id:5,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    category:"POLITIQUE"
+  },
+  {
+    id:6,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    category:"POLITIQUE"
+  }]
+  
+
   return (
     <Layout>
-     
+{/*first section */}
      <Container className="my-5">
         <Row>
           <Col lg={8} >
@@ -28,7 +67,7 @@ const IndexPage = () => {
           <Col lg={4}>
             <Row>
                <Col lg={12} className="p-0">
-               <PrimaryCard/>
+               <PrimaryCard img={data[0].img} title={data[0].title} category={data[0].category}/>
                </Col>
                <Col lg={6} className="mt-3 px-0">
                <SecondCard/>
@@ -40,7 +79,9 @@ const IndexPage = () => {
           </Col>
         </Row>
       </Container>
+{/* end first section */}
 
+{/* second section */}
       <Container>
       <Row>
         <Col lg={8} >
@@ -63,46 +104,27 @@ const IndexPage = () => {
 
         <Col lg={4}>
           <Row className="mt-5 pt-0">
-              <Col lg={12} className="mb-3" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-3" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-3" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-3" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-3" >
-                <ThirdCard />
-              </Col>
-
-              <Col lg={12} className="mb-3" >
-                <ThirdCard />
-              </Col>
-              
+            {
+              data.map((article,index)=> <Col lg={12} className="mb-3" key={index} ><ThirdCard category={article.category} title={article.category} img={article.img} /></Col>)
+            }                   
           </Row>
         </Col>
       </Row>
     </Container>
+{/* end second section */}
 
+{/* third section */}
 <div className="container-fluid my-5" style={{backgroundColor:"rgba(255,0,0,0.1)"}}>
    <Row>
      <Col >
      <Container className="my-5">
      <h3 style={{fontSize:"19px",color:"red"}} className="mb-4"><b>ACTUALITES AFRICAINE</b></h3>
       <Row>
-        <Col lg={4} sm={2} xs={12}>
-          <PrimaryCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12}>
-          <PrimaryCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12}>
-          <PrimaryCard/>
-        </Col>
+
+            {
+              data.map((article,index)=> <Col lg={4} sm={2} xs={12} className="mb-3" key={index} ><PrimaryCard category={article.category} title={article.title} img={article.img} /></Col>)
+            }  
+
       </Row>
       <Row >
         <Col lg={4} sm={2} xs={12} className="mt-4">
@@ -128,9 +150,9 @@ const IndexPage = () => {
      </Col>
    </Row>
 </div>
-
+{/* end third section */}
     
-
+{/* forth section */}
     <Container className="my-5">
       <Row>
         <Col lg={8}  className="pe-lg-4">
@@ -176,17 +198,17 @@ const IndexPage = () => {
         </Col>
       </Row>
     </Container>
+{/* end forth section */}
 
 
 
-
-
+{/* fifth section */}
 
 {/* Bottom section */}
       <Container className="my-5">
       <Row className="justify-content-between align-items-center mb-3">
           <Col lg={1} sm={2} xs={3}>
-           <b className="text-danger">PLUS</b>
+           <b className="text-danger pb-0">PLUS</b>
           </Col>
           <Col lg={11} sm={10} xs={9} style={{textAlign:"right"}}>
               <hr className="text-danger" style={{opacity:1, padding:"1px"}}/>
@@ -200,7 +222,7 @@ const IndexPage = () => {
           <Col lg={3} sm={2} xs={12}>
            <TitleSection className="py-2"><b>POLITIQUE</b></TitleSection>
           </Col>
-          <Col lg={3} sm={2} xs={12} style={{textAlign:"right"}}>
+          <Col lg={3} sm={2} xs={12} style={{textAlign:"right"}} >
               <Link to="/" style={{color:"red", textDecoration:"none"}}>
                 <span>PLUS </span>
               </Link>
@@ -276,7 +298,7 @@ const IndexPage = () => {
         </Row>
       </Container>
       {/* Fin Bottom section */}
-
+{/* en fifth section */}
     </Layout>
   );
 };

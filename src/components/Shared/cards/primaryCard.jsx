@@ -32,16 +32,15 @@ bottom:10px;
 z-index:999;
 
 `
-const PrimaryCard=()=>{
+const PrimaryCard=({img,title,category})=>{
     return (
         <>
             <CardWrapper>
-                <img src="../img.jpg" className="img-fluid" alt="sport" /> 
+                <img src={img} className="img-fluid" alt="sport" /> 
                 <CardBody>
-                    <CategoryPost className="p-1 m-3"><b>POLITIQUE</b></CategoryPost>
+                    <CategoryPost className="p-1 m-3"><b>{category}</b></CategoryPost>
                     <Title className="text-white m-3">
-                        Sport : barcelone champion UEFA primary, ipsum dolor sit amet
-                        consectetur
+                       {title}
                     </Title>
                 </CardBody>
             </CardWrapper>
