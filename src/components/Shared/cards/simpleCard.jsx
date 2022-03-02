@@ -7,12 +7,12 @@ font-size:14px !important;
 line-height:21.5px;
 color:black;
 `
-const SimpleCard=()=>{
+const SimpleCard=({img,title})=>{
     return (
         <>
-            <img src="../img.jpg" className="img-fluid" alt="sport" /> 
+            <img src={img} className="img-fluid" alt="sport" /> 
             <Title className="mt-3">
-                Sport : barcelone champion UEFA Lorem, ipsum dolor      
+                {title}    
             </Title>
         </>    
     )

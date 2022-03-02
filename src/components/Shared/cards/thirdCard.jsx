@@ -12,16 +12,16 @@ const Datation=styled.div`
  font-size:13px;
 `
 
-const ThirdCard=()=>{
+const ThirdCard=({date, title, img})=>{
     return (
         <>
             <Row>
                 <Col>
-                <img src="../img.jpg" className="img-fluid" alt="sport" /> 
+                <img src={img} className="img-fluid" alt="sport" /> 
                 </Col>
                 <Col lg={7} className="position-relative pb-0">
-                    <Title>Sport : barcelone champion UEFA primary, ipsum dolor sit amet</Title>
-                    <Datation className="p-0 mb-0 text-muted">22-04-2022</Datation>   
+                    <Title>{title}</Title>
+                    <Datation className="p-0 mb-0 text-muted">{date}</Datation>   
                 </Col>
                    
             </Row>

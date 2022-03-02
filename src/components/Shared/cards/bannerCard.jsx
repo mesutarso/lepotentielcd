@@ -41,18 +41,17 @@ bottom:10px;
 z-index:999;
 
 `
-const BannerCard=()=>{
+const BannerCard=({img,title,category,subTitle})=>{
     return (
         <>
             <CardWrapper>
-                <img src="../img.jpg" className="img-fluid" alt="sport" /> 
+                <img src={img} className="img-fluid" alt="sport" /> 
                 <CardBody>
-                    <CategoryPost className="p-1 mb-0 mx-3"><b>POLITIQUE</b></CategoryPost><br/>
-                    <SubTitle className="p-1 mx-3 mt-0"><b>Avec la prise en charge des contraintes</b></SubTitle>
+                    <CategoryPost className="p-1 mb-0 mx-3"><b>{category}</b></CategoryPost><br/>
+                    <SubTitle className="p-1 mx-3 mt-0"><b>{subTitle}</b></SubTitle>
                     
                     <Title className="text-white m-3">
-                        Sport : barcelone champion UEFA primary, ipsum dolor sit amet
-                        consectetur adipisicing elit.
+                        {title}
                     </Title>
                 </CardBody>
             </CardWrapper>

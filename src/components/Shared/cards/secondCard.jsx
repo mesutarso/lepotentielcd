@@ -17,16 +17,15 @@ bottom:0;
 left:0;
 box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 `
-const SecondCard=()=>{
+const SecondCard=({img,title,category})=>{
     return (
         <>
             <div className="position-relative">
-                <img src="../img.jpg" className="img-fluid" alt="sport" /> 
-                <CategoryPost className="px-2 py-1 mb-0"><b>SPORT</b></CategoryPost>
+                <img src={img} className="img-fluid" alt="sport" /> 
+                <CategoryPost className="px-2 py-1 mb-0"><b>{category}</b></CategoryPost>
             </div>
             <Title className="mt-3">
-                Sport : barcelone champion UEFA Lorem, ipsum dolor sit amet
-                consectetur.
+                {title}
             </Title>
         </>    
     )

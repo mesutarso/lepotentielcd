@@ -54,7 +54,57 @@ const IndexPage = () => {
     title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
     category:"POLITIQUE"
   }]
+
+  const dataFiltered4= data.filter((value,index)=>index<4);
+  const dataFiltered3= data.filter((value,index)=>index<3);
+  const dataFiltered2= data.filter((value,index)=>index<2);
   
+  const bannerData={
+    id:1,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    subTitle:"Avec l'appui du FIFA",
+    category:"SPORT"
+  };
+
+  const dataWithDate=[{
+    id:1,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    date:"22/02/2020"
+  },
+  {
+    id:2,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    date:"22/02/2020"
+  },
+  {
+    id:3,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    date:"22/02/2020"
+  },
+  {
+    id:4,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    date:"22/02/2020"
+  },
+  {
+    id:5,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    date:"22/02/2020"
+  },
+  {
+    id:6,
+    img:"../img.jpg",
+    title:"Sport : barcelone champion UEFA primary, ipsum dolor sit amet consectetur",
+    date:"22/02/2020"
+  }]
+
+  const dataWithDateFiltered5= dataWithDate.filter((value,index)=>index<5);
 
   return (
     <Layout>
@@ -62,19 +112,17 @@ const IndexPage = () => {
      <Container className="my-5">
         <Row>
           <Col lg={8} >
-            <BannerCard/>
+            <BannerCard img={bannerData.img} title={bannerData.title} category={bannerData.category} subTitle={bannerData.subTitle}/>
           </Col>
           <Col lg={4}>
             <Row>
                <Col lg={12} className="p-0">
                <PrimaryCard img={data[0].img} title={data[0].title} category={data[0].category}/>
                </Col>
-               <Col lg={6} className="mt-3 px-0">
-               <SecondCard/>
-              </Col>
-              <Col lg={6} className="mt-3 ps-1 pe-0">
-              <SecondCard/>
-              </Col>
+
+               {
+                dataFiltered2.map((article,index)=> <Col lg={6}  className={`${index}<1 ? " mt-3 px-0" : "mt-3 ps-1 pe-0 " `}  key={index} ><SecondCard category={article.category} title={article.title} img={article.img} /></Col>)
+               }
             </Row>
           </Col>
         </Row>
@@ -87,25 +135,16 @@ const IndexPage = () => {
         <Col lg={8} >
           <Row>
           <Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITES NATIONALES</b></h3></Col>
-            <Col lg={6} className="mb-5">
-              <SecondCard/>
-            </Col>
-            <Col lg={6} className="mb-5">
-             <SecondCard/> 
-            </Col>
-            <Col lg={6} >
-              <SecondCard/>
-            </Col>
-            <Col lg={6}>
-             <SecondCard/> 
-            </Col>
+            {
+             dataFiltered4.map((article,index)=> <Col lg={6}  className={`${index}<2 ? " mb-5 " : "" `} key={index} ><SecondCard category={article.category} title={article.title} img={article.img} /></Col>)
+            }
           </Row>
         </Col>
 
         <Col lg={4}>
           <Row className="mt-5 pt-0">
             {
-              data.map((article,index)=> <Col lg={12} className="mb-3" key={index} ><ThirdCard category={article.category} title={article.category} img={article.img} /></Col>)
+              dataWithDate.map((article,index)=> <Col lg={12} className="mb-3" key={index} ><ThirdCard date={article.date} title={article.title} img={article.img} /></Col>)
             }                   
           </Row>
         </Col>
@@ -120,31 +159,14 @@ const IndexPage = () => {
      <Container className="my-5">
      <h3 style={{fontSize:"19px",color:"red"}} className="mb-4"><b>ACTUALITES AFRICAINE</b></h3>
       <Row>
-
             {
-              data.map((article,index)=> <Col lg={4} sm={2} xs={12} className="mb-3" key={index} ><PrimaryCard category={article.category} title={article.title} img={article.img} /></Col>)
+             dataFiltered3.map((article,index)=> <Col lg={4} sm={2} xs={12} className="mb-3" key={index} ><PrimaryCard category={article.category} title={article.title} img={article.img} /></Col>)
             }  
-
       </Row>
       <Row >
-        <Col lg={4} sm={2} xs={12} className="mt-4">
-          <ThirdCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12} className="mt-4">
-        <ThirdCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12} className="mt-4">
-        <ThirdCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12} className="mt-4">
-        <ThirdCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12} className="mt-4">
-        <ThirdCard/>
-        </Col>
-        <Col lg={4} sm={2} xs={12} className="mt-4">
-        <ThirdCard/>
-        </Col>
+            {
+              dataWithDate.map((article,index)=> <Col lg={4} sm={2} xs={12} className="mt-4" key={index} ><ThirdCard date={article.date} title={article.title} img={article.img} /></Col>)
+            } 
       </Row>
     </Container>
      </Col>
@@ -158,39 +180,22 @@ const IndexPage = () => {
         <Col lg={8}  className="pe-lg-4">
           <Row><Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITE MONDIALE</b></h3></Col></Row>
           <Row>
-            <Col lg={6} className="mb-5">
-              <SecondCard/>
-            </Col>
-            <Col lg={6} className="mb-5">
-             <SecondCard/> 
-            </Col>
-            <Col lg={6} >
-              <SecondCard/>
-            </Col>
-            <Col lg={6}>
-             <SecondCard/> 
-            </Col>
+
+            {
+             dataFiltered4.map((article,index)=> <Col lg={6}  className={`${index}<2 ? " mb-5 " : "" `} key={index} ><SecondCard category={article.category} title={article.title} img={article.img} /></Col>)
+            } 
+      
           </Row>
         </Col>
 
         <Col lg={4}>
           <Row><Col lg={12} className="ps-0"><h3 style={{fontSize:"19px",color:"black"}} className="mb-4 "><b>SPORT</b></h3></Col></Row>
           <Row className="bg-black px-1 py-4">
-              <Col lg={12} className="mb-4 text-white" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-4 text-white" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-4 text-white" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-4 text-white" >
-                <ThirdCard />
-              </Col>
-              <Col lg={12} className="mb-4 text-white">
-                <ThirdCard />
-              </Col>
+
+            {
+              dataWithDateFiltered5.map((article,index)=> <Col lg={12} className="mb-3 text-white" key={index} ><ThirdCard date={article.date} title={article.title} img={article.img} /></Col>)
+            }   
+              
               <Col lg={12} className="text-white">
                 <button className="btn btn-secondary">Voir plus</button>
               </Col>
@@ -216,7 +221,6 @@ const IndexPage = () => {
         </Row>
       </Container>
 
-
       <Container className="my-4">
         <Row className="justify-content-between mb-3">
           <Col lg={3} sm={2} xs={12}>
@@ -229,18 +233,11 @@ const IndexPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
+
+            {
+             dataFiltered4.map((article,index)=> <Col lg={3} sm={2} xs={12}  key={index} ><SimpleCard  title={article.title} img={article.img} /></Col>)
+            } 
+  
         </Row>
       </Container>
 
@@ -256,18 +253,9 @@ const IndexPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
+            {
+             dataFiltered4.map((article,index)=> <Col lg={3} sm={2} xs={12}  key={index} ><SimpleCard  title={article.title} img={article.img} /></Col>)
+            } 
         </Row>
       </Container>
 
@@ -283,18 +271,9 @@ const IndexPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
-          <Col lg={3} sm={2} xs={12}>
-          <SimpleCard/>
-          </Col>
+            {
+             dataFiltered4.map((article,index)=> <Col lg={3} sm={2} xs={12}  key={index} ><SimpleCard  title={article.title} img={article.img} /></Col>)
+            } 
         </Row>
       </Container>
       {/* Fin Bottom section */}
