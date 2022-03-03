@@ -9,7 +9,7 @@ import ThirdCard from "../components/Shared/cards/thirdCard";
 import BannerCard from "../components/Shared/cards/bannerCard";
 import styled from 'styled-components';
 
-const TitleSection=styled.h3`
+export const TitleSection=styled.h3`
 background-color:red;
 color:white;
 text-align:center;
@@ -119,7 +119,6 @@ const IndexPage = () => {
                <Col lg={12} className="p-0">
                <PrimaryCard img={data[0].img} title={data[0].title} category={data[0].category}/>
                </Col>
-
                {
                 dataFiltered2.map((article,index)=> <Col lg={6}  className={`${index}<1 ? " mt-3 px-0" : "mt-3 ps-1 pe-0 " `}  key={index} ><SecondCard category={article.category} title={article.title} img={article.img} /></Col>)
                }
@@ -134,7 +133,7 @@ const IndexPage = () => {
       <Row>
         <Col lg={8} >
           <Row>
-          <Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITES NATIONALES</b></h3></Col>
+          <Col lg={12} ><h3 style={{fontSize:"19px",color:"black"}} className="mb-4"><b>ACTUALITES NATIONALES </b></h3></Col>
             {
              dataFiltered4.map((article,index)=> <Col lg={6}  className={`${index}<2 ? " mb-5 " : "" `} key={index} ><SecondCard category={article.category} title={article.title} img={article.img} /></Col>)
             }
